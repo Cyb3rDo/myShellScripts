@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Starting apache"
+sudo /etc/init.d/apache2 start
+echo "starting mysql"
+sudo /etc/init.d/mysql start

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Stopping apache"
+sudo /etc/init.d/apache2 stop
+echo "Stopping mysql"
+sudo /etc/init.d/mysql stop
