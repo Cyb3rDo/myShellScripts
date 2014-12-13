@@ -1,0 +1,17 @@
+#!/bin/bash
+
+cd ~/
+basepath=Downloads/InternetDownloads/
+while true ; do
+filename=$(inotifywait -e create --format "%f" Downloads/InternetDownloads)
+arr=(${filename//./ })
+if [ ! -d ${arr[1]} ];
+	then mkdir ${basepath}${arr[1]}
+fi
+
+
+separator='/'
+
+newpath=${arr[1]}
+mv $basepath${filename} $basepath$newpath${separator}
+done	
